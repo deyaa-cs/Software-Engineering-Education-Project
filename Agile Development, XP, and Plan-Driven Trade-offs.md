@@ -1,5 +1,5 @@
 Agile Development, XP, and Plan-Driven Trade-offs
-==========================================
+
 
 TOPICS COVERED
 - Agile methods
@@ -10,7 +10,6 @@ TOPICS COVERED
 
 
 1. RAPID SOFTWARE DEVELOPMENT
-------------------------------
 - Rapid development and delivery is now often the most important requirement for software systems.
 - New software needs to be developed quickly to take advantage of opportunities and respond to competitive pressure.
 - Software must evolve quickly to reflect changing business needs.
@@ -24,7 +23,7 @@ Shared characteristics of rapid development approaches:
 
 
 2. AGILE METHODS
-------------------------------
+
 - Dissatisfaction with the overhead of 1980s–1990s heavyweight, plan-driven approaches led to the creation of agile methods.
 
 Agile methods:
@@ -36,7 +35,7 @@ Agile methods:
 
 
 PRINCIPLES OF AGILE METHODS
-------------------------------
+
 1. Customer Involvement – Customers stay closely involved throughout development; they provide/prioritize requirements and evaluate iterations.
 2. Incremental Delivery – Software is developed in increments, with the customer specifying what goes into each increment.
 3. People, Not Process – Recognize and use the skills of the team; let members develop their own ways of working rather than following rigid processes.
@@ -45,13 +44,13 @@ PRINCIPLES OF AGILE METHODS
 
 
 WHERE AGILE METHODS WORK WELL
-------------------------------
+
 1. Product development – a company developing a small/medium product for sale.
 2. Custom system development within an organization – where the customer is committed to being involved and there aren't many external rules/regulations affecting the software.
 
 
 PROBLEMS WITH AGILE METHODS
-------------------------------
+
 1. Success depends on a customer willing/able to spend time with the team and represent all stakeholders — hard to keep such customers engaged long-term.
 2. Some team members may not suit the intense collaboration agile requires, and may not interact well with others.
 3. Prioritizing changes is difficult when there are multiple stakeholders with different priorities.
@@ -60,7 +59,7 @@ PROBLEMS WITH AGILE METHODS
 
 
 3. PLAN-DRIVEN VS AGILE DEVELOPMENT
-------------------------------
+
 AGILE DEVELOPMENT:
 - Treats design and implementation as the central activities.
 - Incorporates requirements elicitation and testing into design/implementation.
@@ -78,7 +77,7 @@ DIAGRAM CONCEPT (Plan-based vs Agile):
 
 
 KEY QUESTIONS: CHOOSING PLAN-DRIVEN VS AGILE
-------------------------------
+
 - Is a very detailed specification/design needed before implementation? → Favor plan-driven.
 - Is incremental delivery with rapid customer feedback realistic? → Favor agile.
 - How large is the system? Agile works best with a small, co-located team; large systems may need a plan-driven approach.
@@ -92,7 +91,7 @@ KEY QUESTIONS: CHOOSING PLAN-DRIVEN VS AGILE
 
 
 4. EXTREME PROGRAMMING (XP)
-------------------------------
+
 - Perhaps the best-known and most widely used agile method.
 - Example: several new system versions may be developed by different programmers, integrated, and tested in a single day.
 
@@ -108,7 +107,7 @@ Select user stories for release → Break stories into tasks → Plan release �
 
 
 XP PRACTICES
-------------------------------
+
 - Incremental Planning: Requirements recorded on Story Cards; stories for a release chosen by time available and priority; developers break stories into tasks.
 - Small Releases: Minimal useful functionality is released first; frequent releases add functionality incrementally.
 - Simple Design: Only enough design to meet current requirements — no more.
@@ -122,7 +121,7 @@ XP PRACTICES
 
 
 HOW XP PRACTICES SUPPORT AGILE PRINCIPLES
-------------------------------
+
 - Customer Involvement → full-time customer engagement with the team.
 - Incremental Development → small, frequent system releases.
 - People, Not Process → pair programming, collective ownership, sustainable pace (no excessive overtime).
@@ -131,7 +130,7 @@ HOW XP PRACTICES SUPPORT AGILE PRINCIPLES
 
 
 REQUIREMENTS AS SCENARIOS (USER STORIES)
-------------------------------
+
 - In XP, a customer/user is part of the team and makes decisions on requirements.
 - Requirements are expressed as scenarios/user stories, written on cards.
 - The development team breaks stories into implementation tasks, which form the basis for schedule and cost estimates.
@@ -146,7 +145,7 @@ Example task breakdown for this story:
 
 
 REFACTORING
-------------------------------
+
 - The team looks for possible software improvements and makes them even without an immediate need.
 - Improves understandability of the software, reducing the need for documentation.
 - Makes future changes easier since the code stays well-structured and clear.
@@ -159,7 +158,7 @@ Examples of refactoring:
 
 
 PAIR PROGRAMMING
-------------------------------
+
 - Programmers work in pairs, sitting together to write code.
 - Pairs are created dynamically so all team members eventually work with each other.
 - Measured productivity with pair programming is similar to two people working independently.
@@ -172,7 +171,7 @@ Advantages of pair programming:
 
 
 5. SCALING AGILE METHODS
-------------------------------
+
 - Agile methods work best for small/medium projects developed by a small, co-located team.
 - Their success largely comes from improved communication when everyone works together closely.
 - Scaling up means adapting agile methods for larger, longer projects involving multiple teams, sometimes in different locations.
@@ -186,21 +185,21 @@ WHY LARGE SYSTEMS ARE DIFFERENT:
 
 
 SCALING UP vs SCALING OUT
-------------------------------
+
 - Scaling Up: Using agile methods to build large software systems that a small team cannot develop alone.
 - Scaling Out: Introducing agile methods across a large organization with years of (often non-agile) software development experience.
 - Whichever direction, it's essential to preserve agile fundamentals: flexible planning, frequent releases, continuous integration, test-driven development, and strong team communication.
 
 
 ADAPTATIONS FOR SCALING UP TO LARGE SYSTEMS
-------------------------------
+
 - Can't focus only on code — more up-front design and system documentation is needed.
 - Cross-team communication mechanisms must be designed and used (e.g., regular phone/video conferences, frequent short electronic status meetings).
 - True continuous integration (rebuilding the whole system on every check-in) becomes impractical — but frequent system builds and regular releases should still be maintained.
 
 
 CHALLENGES OF SCALING OUT TO LARGE COMPANIES
-------------------------------
+
 - Project managers unfamiliar with agile methods may be reluctant to take on the risk of a new approach.
 - Large organizations often have bureaucratic quality procedures/standards that conflict with agile methods.
 - Agile methods work best with highly skilled teams, but large organizations often have a wide range of skill levels.
@@ -208,6 +207,6 @@ CHALLENGES OF SCALING OUT TO LARGE COMPANIES
 
 
 KEY POINTS (SUMMARY)
-------------------------------
+
 - A particular strength of Extreme Programming is developing automated tests before implementing a feature; all tests must pass when an increment is integrated into the system.
 - Scaling agile methods for large systems is difficult — large systems require some up-front design and documentation.
