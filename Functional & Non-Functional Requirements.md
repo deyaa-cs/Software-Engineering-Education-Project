@@ -1,5 +1,5 @@
 Title: Functional and Non-Functional Requirements
-============================================================
+
 Requirements analysis is a crucial phase in software development where the needs and expectations of users and stakeholders are identified and documented. It ensures the system is built correctly and meets its intended goals.
 
 Core Definitions:
@@ -8,9 +8,9 @@ Core Definitions:
 
 Example: In an online shopping system, functional requirements include features like user login and order placement, while non-functional requirements include system performance, security, and scalability.
 
---------------------------------------------------------------------
+
 1. FUNCTIONAL REQUIREMENTS
---------------------------------------------------------------------
+
 Define the specific features and operations a system must perform to meet business and user needs. They describe what the system should do and how it interacts with users or other systems.
 
 Focus:
@@ -28,9 +28,9 @@ Sample Questions:
 - What features should the system include?
 - What edge cases or special scenarios should the system handle?
 
---------------------------------------------------------------------
+
 2. NON-FUNCTIONAL REQUIREMENTS (NFRs)
---------------------------------------------------------------------
+
 Define how a system should operate, focusing on performance, reliability, and user experience rather than specific features. They ensure the system is efficient, secure, and maintainable over time.
 
 Key Quality Attributes:
@@ -47,9 +47,9 @@ Sample Questions:
 - How secure should it be against unauthorized access?
 - How available and reliable should the system be?
 
---------------------------------------------------------------------
+
 3. EXTENDED REQUIREMENTS
---------------------------------------------------------------------
+
 Define additional capabilities or considerations that enhance the system but are not part of the core functional features. These help improve monitoring, reliability, and future expansion.
 
 Examples:
@@ -65,12 +65,12 @@ Sample Questions:
 - How will logs and analytics be collected for debugging and insights?
 - How will the system recover from failures or data loss?
 
---------------------------------------------------------------------
+
 EXAMPLES
---------------------------------------------------------------------
+
 
 1. Online Banking System
-------------------------
+
 Functional Requirements:
 - Users should be able to log in with their username and password.
 - Users should be able to check their account balance.
@@ -87,7 +87,7 @@ Extended Requirements:
 - The system should include monitoring and alerts to detect unusual activities.
 
 2. Food Delivery App
---------------------
+
 Functional Requirements:
 - Users can browse the menu and place an order.
 - Users can make payments and track their orders in real time.
@@ -102,9 +102,9 @@ Extended Requirements:
 - The system should include monitoring and logging to track errors and performance.
 - The system should support A/B testing for new features like promotions or UI changes.
 
---------------------------------------------------------------------
+
 DIFFERENCES BETWEEN FUNCTIONAL AND NON-FUNCTIONAL REQUIREMENTS
---------------------------------------------------------------------
+
 Functional Requirements:
 - Define WHAT the system should do (features & functionality)
 - Focus on system behavior and operations
@@ -125,18 +125,18 @@ Non-Functional Requirements:
 - Documented using technical specs, performance criteria
 - Examples: scalability, security, response time, reliability, maintainability.
 
---------------------------------------------------------------------
+
 COMMON CHALLENGES IN DEFINING REQUIREMENTS
---------------------------------------------------------------------
+
 - Ambiguity in Requirements: Vague or incomplete requirements make it difficult to clearly define what the system should do and how it should perform.
 - Changing Requirements: Business goals, market conditions, or user expectations may change over time, requiring updates to the system design.
 - Difficulty in Prioritization: Functional requirements often receive more attention, while important aspects like scalability, security, or monitoring may be overlooked.
 - Measuring Non-Functional Requirements: Features are easier to test, but qualities like usability, scalability, and reliability are harder to measure and validate.
 - Overlapping or Conflicting Requirements: Some requirements may conflict with others, such as strong security measures potentially affecting system performance.
 
---------------------------------------------------------------------
+
 GATHERING REQUIREMENTS
---------------------------------------------------------------------
+
 
 1. Functional Requirements:
    - Interviews: Talk to stakeholders or users to understand their needs.
