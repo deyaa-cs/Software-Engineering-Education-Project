@@ -14,7 +14,7 @@ The goal is to provide a structured reference for students, developers, and prof
 - [Functional and Non-Functional Requirements](./Functional%20and%20Non%20Functional%20Requirements.md)  
 - [Software Processes](./SOFTWARE%20PROCESSES.md)  
 - [Software Design](./Software%20Design%20-%20Summary%20Notes.md)  
-- [Software Quality Assurance (SQA)](./Software%20Quality%20Assurance%20-%20Summary%20Notes.md)  
+- [Software Quality Assurance (SQA)](./Software%20Quality%20Assurance%20(SQA).md)
 - [Agile Development, XP, and Plan-Driven Trade-offs](./Agile%20Development%2C%20XP%2C%20and%20Plan-Driven%20Trade-offs.md)  
 ---
 
