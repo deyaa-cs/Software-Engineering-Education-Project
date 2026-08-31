@@ -11,7 +11,7 @@ The goal is to provide a structured reference for students, developers, and prof
 ## 📂 Contents
 
 - [Requirements Engineering](./Requirements%20Engineering.md)  
-- [Functional and Non-Functional Requirements](./Functional%20and%20Non%20Functional%20Requirements.md)  
+- [Functional and Non-Functional Requirements](./Functional%20and%20Non-Functional%20Requirements.md)
 - [Software Processes](./SOFTWARE%20PROCESSES.md)
 - [Software Design](./Software%20Design%20-%20Summary%20Notes.md)  
 - [Software Quality Assurance (SQA)](./Software%20Quality%20Assurance%20(SQA).md)
