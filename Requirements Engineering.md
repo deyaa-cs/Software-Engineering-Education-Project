@@ -1,9 +1,9 @@
-===================================================
+
 REQUIREMENTS ENGINEERING
-===================================================
+
 
 TOPICS COVERED
----------------
+
 - Functional and non-functional requirements
 - The software requirements document
 - Requirements specification
@@ -13,9 +13,9 @@ TOPICS COVERED
 - Requirements management
 
 
-===================================================
+
 1. WHAT IS REQUIREMENTS ENGINEERING?
-===================================================
+
 
 - Requirements = descriptions of what a system should do, the
   services it provides, and the constraints on its operation.
@@ -42,9 +42,9 @@ will do. Both documents may be called the requirements
 document."
 
 
-===================================================
+
 2. TYPES OF REQUIREMENTS
-===================================================
+
 
 USER REQUIREMENTS
 - Statements in natural language + diagrams describing the
@@ -77,9 +77,9 @@ Example (MHC-PMS - Mental Health Care Patient Management System):
     1.5 Restrict report access to authorized users only.
 
 
-===================================================
+
 3. FUNCTIONAL VS NON-FUNCTIONAL REQUIREMENTS
-===================================================
+
 
 FUNCTIONAL REQUIREMENTS
 - Describe the functionality/services the system should provide.
@@ -191,9 +191,9 @@ METRICS FOR SPECIFYING NON-FUNCTIONAL REQUIREMENTS
                   | target systems
 
 
-===================================================
+
 4. THE SOFTWARE REQUIREMENTS DOCUMENT
-===================================================
+
 
 - The official statement of what system developers should
   implement.
@@ -254,9 +254,9 @@ STRUCTURE OF A REQUIREMENTS DOCUMENT
       indexes.
 
 
-===================================================
+
 5. REQUIREMENTS SPECIFICATION
-===================================================
+
 
 - The process of writing down user & system requirements in
   the requirements document.
@@ -369,9 +369,9 @@ TABULAR SPECIFICATION
                                                   | MinimumDose
 
 
-===================================================
+
 6. REQUIREMENTS ENGINEERING PROCESSES
-===================================================
+
 
 - Processes vary by application domain, people involved, and
   organization — but generic activities apply to all:
@@ -382,9 +382,9 @@ TABULAR SPECIFICATION
      wants.
 
 
-===================================================
+
 7. REQUIREMENTS ELICITATION AND ANALYSIS
-===================================================
+
 
 - Also called requirements elicitation/discovery.
 - Technical staff work with customers to learn about the
@@ -492,9 +492,9 @@ TECHNIQUES FOR ELICITATION
        cannot identify NEW features to add to a system.
 
 
-===================================================
+
 8. REQUIREMENTS VALIDATION
-===================================================
+
 
 - Demonstrates that requirements define the system the customer
   really wants.
@@ -530,9 +530,9 @@ REVIEW CHECKS
     other requirements?
 
 
-===================================================
+
 9. REQUIREMENTS MANAGEMENT
-===================================================
+
 
 - The process of managing CHANGING requirements during RE and
   system development.
@@ -594,9 +594,9 @@ REQUIREMENTS CHANGE MANAGEMENT PROCESS
   implementation → Revised requirements
 
 
-===================================================
+
 KEY POINTS (SUMMARY)
-===================================================
+
 
 1. A range of techniques can be used for requirements
    elicitation: interviews, scenarios, use-cases, and
