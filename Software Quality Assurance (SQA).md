@@ -1,6 +1,5 @@
-===================================================
 SOFTWARE QUALITY ASSURANCE (SQA) — SUMMARY NOTES
-===================================================
+
 
 WHAT IS SOFTWARE QUALITY ASSURANCE (SQA)?
 - SQA is a way to assure quality in software.
@@ -21,9 +20,8 @@ QUALITY (GENERAL CONCEPT)
   (e.g., ISO).
 
 
-===================================================
 1. ELEMENTS OF SOFTWARE QUALITY ASSURANCE
-===================================================
+
 
 - STANDARDS
   - Organizations like IEEE and ISO provide software
@@ -72,9 +70,9 @@ QUALITY (GENERAL CONCEPT)
     conducted and that risk-related contingency plans exist.
 
 
-===================================================
+
 2. FOCUS AREAS OF SOFTWARE QUALITY ASSURANCE
-===================================================
+
 
 - PORTABILITY
   - The software's ability to be easily transferred/adapted to
@@ -112,9 +110,9 @@ QUALITY (GENERAL CONCEPT)
     disruption to users.
 
 
-===================================================
+
 3. MAJOR ACTIVITIES IN SOFTWARE QUALITY ASSURANCE
-===================================================
+
 
 1. SQA MANAGEMENT PLAN
    - Plan how SQA will be carried out throughout the project.
@@ -154,9 +152,9 @@ QUALITY (GENERAL CONCEPT)
    - Follow established procedures for handling variances.
 
 
-===================================================
+
 4. BENEFITS OF SOFTWARE QUALITY ASSURANCE
-===================================================
+
 
 - Produces high-quality software.
 - High-quality applications save time and cost.
@@ -171,9 +169,9 @@ QUALITY (GENERAL CONCEPT)
   issues trap a business in a costly, endless repair cycle.
 
 
-===================================================
+
 5. DISADVANTAGES OF SOFTWARE QUALITY ASSURANCE
-===================================================
+
 
 - COST
   - Requires more resources, increasing the project budget.
@@ -212,9 +210,9 @@ QUALITY (GENERAL CONCEPT)
     coordination.
 
 
-===================================================
+
 CONCLUSION
-===================================================
+
 Software Quality Assurance is a continuous, parallel process
 throughout software development — not a single final check.
 It combines standards, reviews, testing, risk management, and
