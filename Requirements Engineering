@@ -1,0 +1,611 @@
+===================================================
+REQUIREMENTS ENGINEERING
+===================================================
+
+TOPICS COVERED
+---------------
+- Functional and non-functional requirements
+- The software requirements document
+- Requirements specification
+- Requirements engineering processes
+- Requirements elicitation and analysis
+- Requirements validation
+- Requirements management
+
+
+===================================================
+1. WHAT IS REQUIREMENTS ENGINEERING?
+===================================================
+
+- Requirements = descriptions of what a system should do, the
+  services it provides, and the constraints on its operation.
+- Requirements Engineering (RE) = the process of finding out,
+  analyzing, documenting, and checking these services and
+  constraints.
+
+WHAT IS A REQUIREMENT?
+- Can range from a high-level abstract statement of a service
+  or constraint, to a detailed mathematical functional spec.
+- This happens because requirements serve a dual function:
+  1) Basis for a bid on a contract -> must be open to
+     interpretation.
+  2) Basis for the contract itself -> must be defined in detail.
+  - Both may be called "requirements."
+
+DAVIS' VIEW (Requirements Abstraction):
+"If a company wants to award a contract for a large software
+project, it must define its needs abstractly enough that no
+single solution is forced, allowing multiple contractors to
+bid. Once awarded, the contractor writes a more detailed
+system definition so the client can validate what the software
+will do. Both documents may be called the requirements
+document."
+
+
+===================================================
+2. TYPES OF REQUIREMENTS
+===================================================
+
+USER REQUIREMENTS
+- Statements in natural language + diagrams describing the
+  services the system provides and its operational constraints.
+- Audience: client managers, end-users, client engineers,
+  contractor managers, system architects.
+
+SYSTEM REQUIREMENTS
+- A structured, detailed document describing the system's
+  functions, services, and operational constraints.
+- Defines WHAT must be implemented — may form part of a
+  contract between client and contractor.
+- Audience: end-users, client engineers, system architects,
+  software developers.
+
+Example (MHC-PMS - Mental Health Care Patient Management System):
+  User requirement:
+    "The MHC-PMS shall generate monthly management reports
+    showing the cost of drugs prescribed by each clinic during
+    that month."
+  System requirements (more detailed):
+    1.1 Generate a summary of drugs prescribed, cost, and
+        prescribing clinics on the last working day of the month.
+    1.2 Auto-generate the report for printing after 17:30 on
+        the last working day.
+    1.3 Create one report per clinic listing drug names, total
+        prescriptions, doses, and total cost.
+    1.4 Create separate reports per dose unit if drugs come in
+        different doses.
+    1.5 Restrict report access to authorized users only.
+
+
+===================================================
+3. FUNCTIONAL VS NON-FUNCTIONAL REQUIREMENTS
+===================================================
+
+FUNCTIONAL REQUIREMENTS
+- Describe the functionality/services the system should provide.
+- Describe how the system should react to inputs and behave in
+  specific situations (may also state what it should NOT do).
+- Depend on the software type, users, and system context.
+- User-level = high-level statements; system-level = detailed
+  descriptions of functions, inputs, outputs, exceptions, etc.
+
+Examples (MHC-PMS):
+  - A user shall be able to search appointment lists for all
+    clinics.
+  - The system shall generate a daily list, per clinic, of
+    patients expected for appointments.
+  - Each staff member shall be uniquely identified by an
+    8-digit employee number.
+
+REQUIREMENTS IMPRECISION
+- Problems occur when requirements aren't precisely stated.
+- Ambiguous wording can be interpreted differently by users vs
+  developers.
+- Example: the word "search" — a user may mean searching all
+  clinics, but a developer may implement search within one
+  clinic only.
+
+COMPLETENESS & CONSISTENCY
+- Ideally requirements should be:
+  - Complete: cover all needed facilities.
+  - Consistent: no conflicts/contradictions.
+- In practice, a fully complete & consistent requirements
+  document is impossible to produce.
+
+NON-FUNCTIONAL REQUIREMENTS
+- Define system properties/constraints: reliability, response
+  time, storage, I/O device capability, system representation.
+- May include process requirements (e.g., mandated IDE,
+  programming language, or development method).
+- Can be MORE critical than functional requirements — if unmet,
+  the system may be useless.
+- Implementation is often diffused throughout the system because:
+  1) They may affect overall architecture rather than single
+     components (e.g., performance -> minimizing inter-component
+     communication).
+  2) A single non-functional requirement (e.g., security) can
+     spawn multiple functional requirements, and may also
+     restrict existing ones.
+
+NON-FUNCTIONAL CLASSIFICATIONS
+  - Product requirements: how the delivered product must behave
+    (speed, reliability, etc.)
+  - Organizational requirements: derived from company policies
+    (operational processes, development process/language, etc.)
+  - External requirements: from factors outside the system/
+    dev process (e.g., regulatory/legal requirements).
+
+  Non-functional requirement tree:
+    Non-functional
+     ├── Product
+     │     ├── Efficiency (→ Usability → Performance, Space)
+     │     ├── Dependability
+     │     └── Security
+     ├── Organizational
+     │     ├── Environmental
+     │     ├── Operational
+     │     └── Development
+     └── External
+           ├── Regulatory
+           ├── Ethical
+           └── Legislative (→ Accounting, Safety/Security)
+
+  Examples (MHC-PMS):
+    - Product: System available to all clinics Mon–Fri
+      08:30–17:30; downtime max 5 seconds/day.
+    - Organizational: Users must authenticate with their health
+      authority ID card.
+    - External: Must implement patient privacy provisions per
+      HStan-03-2006-priv.
+
+GOALS VS REQUIREMENTS
+- Non-functional requirements are hard to state precisely;
+  imprecise ones are hard to verify.
+- Users/customers often express them as vague GOALS (e.g.,
+  "easy to use," "should recover from failure").
+- Goals leave room for interpretation — problematic for
+  developers.
+- A TESTABLE non-functional requirement uses a measurable
+  statement that can be objectively tested.
+
+  Example:
+    Goal: "The system should be easy to use by medical staff
+    and minimize user errors."
+    Testable requirement: "Medical staff shall be able to use
+    all system functions after 4 hours of training. After
+    training, average errors by experienced users shall not
+    exceed 2 per hour of system use."
+
+METRICS FOR SPECIFYING NON-FUNCTIONAL REQUIREMENTS
+  Property        | Measure
+  ----------------|--------------------------------------------
+  Speed           | Transactions/sec, response time, screen
+                  | refresh time
+  Size            | Mbytes, number of ROM chips
+  Ease of use     | Training time, number of help frames
+  (Reliability)   | Mean time to failure, probability of
+                  | unavailability, failure rate, availability
+  Robustness      | Restart time after failure, % events causing
+                  | failure, probability of data corruption
+  Portability     | % target-dependent statements, number of
+                  | target systems
+
+
+===================================================
+4. THE SOFTWARE REQUIREMENTS DOCUMENT
+===================================================
+
+- The official statement of what system developers should
+  implement.
+- Should include BOTH user requirements AND system requirements.
+- It is NOT a design document — it defines WHAT the system
+  should do, not HOW.
+
+AGILE METHODS & REQUIREMENTS
+- Many agile methods see a formal requirements document as a
+  waste of time (requirements change too quickly → document
+  becomes outdated).
+- Methods like XP use incremental RE and express requirements
+  as "user stories."
+
+WHO USES THE REQUIREMENTS DOCUMENT?
+  - System customers: specify/verify requirements, propose
+    changes.
+  - Managers: plan bids and the development process.
+  - System engineers: understand what to build.
+  - System test engineers: develop validation tests.
+  - System maintenance engineers: understand the system and
+    part relationships.
+
+VARIABILITY OF DETAIL
+- Level of detail depends on system type & development process:
+  - Critical systems → need highly detailed requirements
+    (safety/security analysis).
+  - Outsourced development → needs precise, detailed specs;
+    in-house → can be less detailed.
+  - Incrementally developed systems → typically less detail.
+- Standards exist (e.g., IEEE) mainly for large systems
+  engineering projects.
+
+STRUCTURE OF A REQUIREMENTS DOCUMENT
+  1. Preface – readership, version history, rationale for changes.
+  2. Introduction – need for the system, brief functions, how it
+     works with other systems, fit with business objectives.
+  3. Glossary – defines technical terms (assume no reader
+     expertise).
+  4. User requirements definition – services for users; also
+     covers non-functional requirements; may use diagrams,
+     natural language, etc.; product/process standards noted.
+  5. System architecture – high-level overview of anticipated
+     architecture; shows function distribution across modules;
+     highlights reused components.
+  6. System requirements specification – functional & non-
+     functional requirements in more detail; interfaces to
+     other systems.
+  7. System models – graphical models (object models, data-flow
+     models, semantic data models) of system/environment
+     relationships.
+  8. System evolution – fundamental assumptions and anticipated
+     future changes (hardware, user needs) — helps designers
+     avoid decisions that block future changes.
+  9. Appendices – detailed hardware/database descriptions,
+     min/optimal configurations, logical data organization.
+  10. Index – alphabetic index, plus possibly diagram/function
+      indexes.
+
+
+===================================================
+5. REQUIREMENTS SPECIFICATION
+===================================================
+
+- The process of writing down user & system requirements in
+  the requirements document.
+- User/system requirements should ideally be: clear,
+  unambiguous, easy to understand (even for non-technical
+  readers), complete, and consistent.
+- System requirements are more detailed/technical.
+- Since requirements may form part of a contract, completeness
+  matters a lot.
+
+WAYS OF WRITING SYSTEM REQUIREMENTS SPECS
+  Notation                  | Description
+  ---------------------------|--------------------------------
+  Natural language          | Numbered sentences; one
+                             | requirement per sentence.
+  Structured natural        | Written on a standard form/
+  language                  | template with defined fields.
+  Design description        | Programming-language-like with
+  languages                 | abstract features; rarely used
+                             | now (except interface specs).
+  Graphical notations       | Graphical models + text
+                             | annotations; UML use case &
+                             | sequence diagrams common.
+  Mathematical              | Based on finite-state machines,
+  specifications            | sets, etc. Unambiguous, but most
+                             | customers can't understand/verify
+                             | them, so reluctant to accept as
+                             | a contract.
+
+NATURAL LANGUAGE SPECIFICATION
+- Requirements as natural language sentences + diagrams/tables.
+- Popular because it's expressive, intuitive, and universal —
+  understandable by users and customers.
+
+GUIDELINES FOR WRITING REQUIREMENTS
+  - Use a standard format consistently for all requirements.
+  - Use language consistently: "shall" = mandatory,
+    "should" = desirable.
+  - Highlight key parts of text.
+  - Avoid computer jargon.
+  - Include a rationale explaining why each requirement exists.
+
+Example (insulin pump):
+  3.2 The system shall measure blood sugar and deliver insulin
+      (if required) every 10 minutes.
+      (Rationale: blood sugar changes slowly, so more frequent
+      measurement is unnecessary; less frequent could cause
+      unnecessarily high sugar levels.)
+  3.6 The system shall run a self-test routine every minute,
+      per conditions/actions defined in Table 1.
+      (Rationale: catches hardware/software problems and warns
+      if normal operation may be impossible.)
+
+PROBLEMS WITH NATURAL LANGUAGE
+  - Lack of clarity: precision is hard without hurting
+    readability.
+  - Requirements confusion: functional and non-functional
+    requirements get mixed up.
+  - Requirements amalgamation: multiple requirements expressed
+    together as one.
+
+STRUCTURED SPECIFICATIONS
+- Limits the writer's freedom; requirements written in a
+  standard way.
+- Works well for e.g. embedded control systems; too rigid for
+  many business system requirements.
+
+FORM-BASED SPECIFICATIONS
+  A standard form for functional requirements should include:
+  - Definition of the function/entity
+  - Description of inputs & their source
+  - Description of outputs & their destination
+  - Information needed for computation / other entities used
+  - Description of the action to be taken
+  - Pre- and post-conditions (if applicable)
+  - Side effects (if any)
+
+  Example (insulin pump – "Compute insulin dose: Safe sugar
+  level"):
+    Description: Computes insulin dose when sugar level is in
+      safe zone (3–7 units).
+    Inputs: Current reading (r2), previous two readings (r0, r1)
+    Source: Current reading from sensor; others from memory.
+    Outputs: CompDose – the insulin dose to deliver.
+    Destination: Main control loop.
+    Action: CompDose = 0 if sugar level is stable/falling, or
+      rising with decreasing rate of increase. If rising with
+      stable/increasing rate, CompDose = round((r2−r1)/4); if
+      result rounds to 0, use MinimumDose.
+    Requires: Two previous readings (to compute rate of change).
+    Pre-condition: Insulin reservoir has at least the max
+      allowed single dose.
+    Post-condition: r0 replaced by r1, then r1 replaced by r2.
+    Side-effects: None.
+
+TABULAR SPECIFICATION
+- Used to supplement natural language when complex computations
+  or multiple alternative actions need clear definition.
+
+  Example (insulin pump dose table):
+    Condition                                  | Action
+    --------------------------------------------|------------------
+    Sugar level falling (r2 < r1)               | CompDose = 0
+    Sugar level stable (r2 = r1)                | CompDose = 0
+    Increasing, rate decreasing                 | CompDose = 0
+    ((r2−r1) < (r1−r0))                         |
+    Increasing, rate stable/increasing          | CompDose =
+    ((r2−r1) ≥ (r1−r0))                         | round((r2−r1)/4);
+                                                  | if 0, use
+                                                  | MinimumDose
+
+
+===================================================
+6. REQUIREMENTS ENGINEERING PROCESSES
+===================================================
+
+- Processes vary by application domain, people involved, and
+  organization — but generic activities apply to all:
+  1. Feasibility study – is the system useful to the business?
+  2. Elicitation and analysis – discovering requirements.
+  3. Specification – converting requirements into standard form.
+  4. Validation – checking requirements match what the customer
+     wants.
+
+
+===================================================
+7. REQUIREMENTS ELICITATION AND ANALYSIS
+===================================================
+
+- Also called requirements elicitation/discovery.
+- Technical staff work with customers to learn about the
+  application domain, needed services, and operational
+  constraints.
+- Involves STAKEHOLDERS: end-users, managers, maintenance
+  engineers, domain experts, trade unions, etc.
+
+PROBLEMS OF REQUIREMENTS ANALYSIS
+  - Stakeholders often don't know what they really want.
+  - Stakeholders express requirements in their own terminology.
+  - Different stakeholders may have conflicting requirements.
+  - Organizational/political factors can influence requirements.
+  - Requirements change during analysis — new stakeholders may
+    emerge; business environment may shift.
+
+STAGES OF ELICITATION & ANALYSIS (cyclic process):
+  1. Requirements discovery
+  2. Requirements classification and organization
+  3. Requirements prioritization and negotiation
+  4. Requirements specification
+  (Cycle repeats — output feeds into the next round.)
+
+PROCESS ACTIVITIES EXPLAINED
+  - Requirements discovery: interacting with stakeholders;
+    also uncovers domain requirements.
+  - Classification & organization: groups related requirements
+    into coherent clusters.
+  - Prioritization & negotiation: ranks requirements, resolves
+    conflicts.
+  - Specification: documents requirements, feeding the next
+    cycle.
+
+STAKEHOLDERS IN THE MHC-PMS EXAMPLE
+  - Patients (info recorded in system)
+  - Doctors (assess & treat patients)
+  - Nurses (coordinate consultations, administer treatments)
+  - Medical receptionists (manage appointments)
+  - IT staff (install/maintain system)
+  - Medical ethics manager (ensures ethical guidelines are met)
+  - Health care managers (need management information)
+  - Medical records staff (ensure info is maintained/preserved,
+    record-keeping procedures followed)
+
+TECHNIQUES FOR ELICITATION
+
+  A) INTERVIEWING
+     - Formal or informal; part of most RE processes.
+     - Types:
+       - Closed interviews: pre-determined question list.
+       - Open interviews: explore various issues freely.
+     - Effective interviewing: be open-minded, avoid
+       pre-conceived ideas, listen to stakeholders; use
+       springboard questions, requirement proposals, or working
+       on a prototype to spark discussion.
+     - In practice: usually a mix of closed & open styles.
+     - Good for: general understanding of stakeholder work/
+       interaction with the system.
+     - Not good for: understanding DOMAIN requirements, because:
+       - Requirements engineers may not grasp specific domain
+         terminology.
+       - Domain knowledge may be so familiar to stakeholders
+         that they don't think to mention it.
+
+  B) SCENARIOS
+     - Real-life examples of how a system can be used.
+     - Should include:
+       - Description of the starting situation
+       - Description of the normal flow of events
+       - Description of what can go wrong
+       - Info about concurrent activities
+       - Description of the state when the scenario finishes
+
+  C) USE CASES
+     - Scenario-based UML technique; identifies actors and
+       describes their interactions with the system.
+     - A complete set of use cases should describe ALL possible
+       system interactions.
+     - High-level graphical model + detailed tabular description.
+     - Sequence diagrams can add detail (showing event-processing
+       order).
+
+     Example (MHC-PMS use cases):
+       - Medical receptionist → Register patient, View personal
+         info
+       - Nurse → View record, Edit record
+       - Doctor → Edit record, Setup consultation, Generate
+         report
+       - Manager → Export statistics, Generate report
+
+  D) ETHNOGRAPHY
+     - A social scientist observes/analyzes how people ACTUALLY
+       work (over a considerable period).
+     - People don't need to explain/articulate their work.
+     - Reveals social & organizational factors of importance.
+     - Studies show work is usually richer/more complex than
+       simple system models suggest.
+
+     Scope of ethnography:
+       - Reveals requirements based on how people actually work
+         (vs. how process definitions say they SHOULD work).
+       - Reveals requirements from cooperation & awareness of
+         others' activities (awareness changes how we work).
+     - Effective for understanding EXISTING processes, but
+       cannot identify NEW features to add to a system.
+
+
+===================================================
+8. REQUIREMENTS VALIDATION
+===================================================
+
+- Demonstrates that requirements define the system the customer
+  really wants.
+- Very important — error costs are high:
+  >>> Fixing a requirements error after delivery may cost up
+      to 100 TIMES the cost of fixing an implementation error.
+
+CHECKS DURING VALIDATION
+  - Validity: Does the system provide functions that best
+    support the customer's needs?
+  - Consistency: Are there any requirement conflicts?
+  - Completeness: Are all customer-required functions included?
+  - Realism: Can requirements be implemented given budget/tech?
+  - Verifiability: Can the requirements actually be checked?
+
+VALIDATION TECHNIQUES
+  - Requirements reviews: systematic manual analysis.
+  - Prototyping: use an executable model to check requirements.
+  - Test-case generation: develop tests to check testability.
+
+REQUIREMENTS REVIEWS
+  - Should be held regularly while requirements are being
+    formulated.
+  - Both client AND contractor staff should participate.
+  - Can be formal (with completed docs) or informal — good
+    communication resolves problems early.
+
+REVIEW CHECKS
+  - Verifiability: Is the requirement realistically testable?
+  - Comprehensibility: Is it properly understood?
+  - Traceability: Is its origin clearly stated?
+  - Adaptability: Can it be changed without major impact on
+    other requirements?
+
+
+===================================================
+9. REQUIREMENTS MANAGEMENT
+===================================================
+
+- The process of managing CHANGING requirements during RE and
+  system development.
+- New requirements emerge during development AND after the
+  system goes into use.
+- Need to: track individual requirements, maintain links
+  between dependent requirements (to assess change impact),
+  and establish a formal change-proposal process.
+
+WHY REQUIREMENTS CHANGE
+  - Business/technical environment always changes after
+    installation:
+    - New hardware, need to interface with other systems,
+      shifting business priorities, new legislation/regulations.
+  - Payers vs. users are often different people:
+    - Customers impose requirements due to organizational/
+      budget constraints — may conflict with end-user needs;
+      new features often added post-delivery for user support.
+  - Large systems have diverse user communities with
+    conflicting/contradictory requirements/priorities:
+    - Final requirements = compromise; support balance often
+      needs adjusting later based on experience.
+
+REQUIREMENTS EVOLUTION (concept)
+  Initial understanding of problem → Initial requirements →
+  (time passes) → Changed requirements → feeds back into a
+  Changed understanding of the problem (cycle continues over
+  time).
+
+REQUIREMENTS MANAGEMENT PLANNING
+  Establishes the level of requirements management detail
+  needed. Key decisions:
+  - Requirements identification: each requirement needs a
+    unique ID for cross-referencing.
+  - Change management process: activities to assess impact/cost
+    of changes.
+  - Traceability policies: define relationships between
+    requirements, and between requirements & system design.
+  - Tool support: ranges from specialist requirements management
+    systems to spreadsheets/simple databases.
+
+REQUIREMENTS CHANGE MANAGEMENT PROCESS
+  Deciding whether to accept a requirements change — 3 stages:
+  1. Problem analysis & change specification
+     - Analyze the problem/change proposal for validity.
+     - Feed analysis back to requester, who may refine the
+       proposal or withdraw it.
+  2. Change analysis and costing
+     - Assess the effect of the proposed change using
+       traceability info & system knowledge.
+     - Decide whether to proceed.
+  3. Change implementation
+     - Modify the requirements document and (if needed) the
+       system design/implementation.
+     - Document should ideally be organized for easy change.
+
+  Flow: Identified problem → Problem analysis & change
+  specification → Change analysis & costing → Change
+  implementation → Revised requirements
+
+
+===================================================
+KEY POINTS (SUMMARY)
+===================================================
+
+1. A range of techniques can be used for requirements
+   elicitation: interviews, scenarios, use-cases, and
+   ethnography.
+
+2. Requirements validation checks requirements for validity,
+   consistency, completeness, realism, and verifiability.
+
+3. Business, organizational, and technical changes inevitably
+   lead to changes in a software system's requirements.
+   Requirements management is the process of managing and
+   controlling these changes.
