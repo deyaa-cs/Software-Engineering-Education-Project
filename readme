@@ -7,108 +7,217 @@ The goal is to provide a structured, accessible reference for students, develope
 
 ---
 
-## 📂 Contents
-- [Software Processes](#software-processes) – lifecycle models, activities, coping with change, RUP.
-- [Requirements Engineering](#requirements-engineering) – functional vs non-functional requirements, elicitation, validation, management.
-- [Functional & Non-Functional Requirements](#functional--non-functional-requirements) – definitions, examples, challenges, and extended requirements.
-- [Software Design](#software-design) – design levels, phases, architecture, components, and design documents.
-- [Agile Development & XP](#agile-development--xp) – principles, practices, trade-offs with plan-driven methods, scaling agile.
-- [Software Quality Assurance (SQA)](#software-quality-assurance-sqa) – standards, reviews, testing, risk management, benefits and challenges.
+## 📂 Table of Contents
+- [Software Processes](#-software-processes)
+- [Requirements Engineering](#-requirements-engineering)
+- [Functional & Non-Functional Requirements](#-functional--non-functional-requirements)
+- [Software Design](#-software-design)
+- [Agile Development & XP](#-agile-development--xp)
+- [Software Quality Assurance (SQA)](#-software-quality-assurance-sqa)
 
 ---
 
-## Software Processes
-- Fundamental activities: **Specification, Design & Implementation, Validation, Evolution**.
-- Models: **Waterfall, Incremental Development, Reuse-Oriented Engineering, Spiral, RUP**.
-- Coping with change: prototyping, incremental delivery.
-- Key takeaway: change is inevitable, processes must anticipate and tolerate it.
+## 🧠 Software Processes
 
-[🔝 Back to Contents](#-contents)
+**Fundamental Activities:**
+- Specification – defining what the system should do
+- Design & Implementation – organizing and building the system
+- Validation – checking it does what the customer wants
+- Evolution – changing the system as needs change
 
----
+**Process Models:**
+- Waterfall – sequential phases, best for stable requirements
+- Incremental Development – interleaved activities, rapid feedback
+- Reuse-Oriented Engineering – integrating existing components
+- Spiral Model – risk-driven, iterative
+- Rational Unified Process (RUP) – combines waterfall, incremental, and spiral
 
-## Requirements Engineering
-- Defines **what a system should do** and its constraints.
-- Types: **User requirements** (natural language, diagrams) vs **System requirements** (structured, detailed).
-- Functional vs Non-functional requirements:
-  - Functional → features/services (e.g., login, reporting).
-  - Non-functional → qualities/constraints (e.g., performance, security).
-- Processes: elicitation, specification, validation, management.
-- Techniques: interviews, scenarios, use cases, ethnography.
+**Coping with Change:**
+- Prototyping – early version to test concepts
+- Incremental Delivery – deliver high-priority features first
 
-[🔝 Back to Contents](#-contents)
-
----
-
-## Functional & Non-Functional Requirements
-- **Functional**: what the system does (authentication, data processing, transactions).
-- **Non-functional**: how the system performs (speed, usability, reliability, scalability).
-- Extended requirements: logging, monitoring, analytics, backup, disaster recovery.
-- Examples:
-  - Online banking → login, balance check, notifications.
-  - Food delivery → ordering, payments, real-time tracking.
-- Challenges: ambiguity, changing requirements, prioritization, measuring NFRs.
-
-[🔝 Back to Contents](#-contents)
+[🔝 Back to Table of Contents](#-table-of-contents)
 
 ---
 
-## Software Design
-- Levels:
-  - **Interface Design** → system/environment interactions.
-  - **Architectural Design** → major components & relationships.
-  - **Detailed Design** → algorithms, data structures, UI details.
-- Phases: requirements → research → design → prototyping.
-- Core elements: architecture, modules, components, interfaces, data.
-- Software Design Document (SDD) sections: overview, architecture, data design, interfaces, components, UI, assumptions, glossary.
-- Best practices: clarity, visuals, consistency, traceability, collaboration.
+## 📋 Requirements Engineering
 
-[🔝 Back to Contents](#-contents)
+**Definition:**
+Requirements are descriptions of what a system should do, the services it provides, and the constraints on its operation.
 
----
+**Types of Requirements:**
+- **User Requirements** – natural language + diagrams for non-technical stakeholders
+- **System Requirements** – structured, detailed document for developers
 
-## Agile Development & XP
-- Agile principles: customer involvement, incremental delivery, simplicity, embracing change.
-- Extreme Programming (XP) practices:
-  - Pair programming
-  - Test-first development
-  - Continuous integration
-  - Refactoring
-  - Collective ownership
-- Agile vs Plan-driven trade-offs:
-  - Agile → flexible, fast, evolving requirements.
-  - Plan-driven → structured, documentation-heavy, suited for regulated/large systems.
-- Scaling agile: adaptations for large projects and organizations.
+**Key Processes:**
+1. Feasibility Study – is it technically/financially viable?
+2. Elicitation & Analysis – discover what stakeholders need
+3. Specification – document requirements formally
+4. Validation – check requirements match what the customer wants
 
-[🔝 Back to Contents](#-contents)
+**Elicitation Techniques:**
+- Interviews (closed/open)
+- Scenarios & Use Cases
+- Ethnography (observing actual work practices)
+
+[🔝 Back to Table of Contents](#-table-of-contents)
 
 ---
 
-## Software Quality Assurance (SQA)
-- Works in parallel with development to ensure standards and processes are followed.
-- Elements: standards, reviews, audits, testing, defect analysis, change management, education, security, safety, risk management.
-- Focus areas: portability, usability, reusability, correctness, maintainability, error control.
-- Benefits: higher quality, reliability, reduced maintenance costs.
-- Challenges: cost, time, overhead, resource intensity, resistance to change.
+## ⚙️ Functional & Non-Functional Requirements
 
-[🔝 Back to Contents](#-contents)
+**Functional Requirements:**
+- Define **what** the system should do
+- Features, operations, and behaviors
+- Examples: user login, payment processing, report generation
+
+**Non-Functional Requirements (NFRs):**
+- Define **how** the system performs
+- Quality attributes: performance, security, usability, reliability, scalability
+
+| Property     | Measure                                  |
+|--------------|------------------------------------------|
+| Speed        | Response time, transactions/sec          |
+| Security     | Encryption standards, access control     |
+| Reliability  | Mean time to failure, availability       |
+| Usability    | Training time, error rate                |
+
+**Extended Requirements:**
+- Logging & Monitoring
+- Backup & Disaster Recovery
+- Analytics & A/B Testing
+- Rate Limiting
+
+[🔝 Back to Table of Contents](#-table-of-contents)
 
 ---
 
-## 📊 Example Table
+## 🏗️ Software Design
 
-| Topic                     | Key Focus                                   | Tools/Methods        |
-|---------------------------|---------------------------------------------|----------------------|
-| Requirements Engineering  | Functional & Non-functional requirements    | Interviews, Use Cases|
-| Software Design           | Architecture, Components, Interfaces        | Wireframes, DFDs     |
-| Agile Development (XP)    | Incremental delivery, simplicity, teamwork  | Pair Programming, CI |
-| Quality Assurance (SQA)   | Standards, Testing, Risk Management         | ISO, IEEE, Audits    |
+**Levels of Design:**
+1. **Interface Design** – system interactions with users/devices/other systems
+2. **Architectural Design** – major components, responsibilities, relationships
+3. **Detailed Design** – algorithms, data structures, UI specifics
+
+**Design Phases:**
+1. Understand requirements
+2. Research & analysis
+3. Design the software (wireframes, flow diagrams)
+4. Technical design (detailed implementation plan)
+5. UI/UX design
+6. Prototyping
+
+**Core Elements:**
+- Architecture – conceptual structure
+- Modules – building blocks for specific tasks
+- Components – groups of related functions
+- Interfaces – boundaries where components exchange info
+- Data – storage, access, and flow management
+
+**Software Design Document (SDD) Sections:**
+- Introduction & Overview
+- System Architecture
+- Data Design
+- Interface Design
+- Component Design
+- User Interface Design
+- Assumptions & Dependencies
+- Glossary
+
+[🔝 Back to Table of Contents](#-table-of-contents)
 
 ---
 
-## 🚀 How to Use
-Clone the repository and explore the notes:
+## 🔄 Agile Development & XP
 
-```bash
-git clone https://github.com/yourusername/software-engineering-education.git
+**Agile Principles:**
+- Customer Involvement – close collaboration throughout
+- Incremental Delivery – frequent releases
+- People, Not Process – trust the team
+- Embrace Change – expect and adapt to changes
+- Maintain Simplicity – eliminate complexity
 
+**Extreme Programming (XP) Practices:**
+- Pair Programming – two devs, one screen
+- Test-First Development – write tests before code
+- Continuous Integration – integrate and test daily
+- Refactoring – continuously improve code
+- Collective Ownership – anyone can change anything
+- Small Releases – ship minimal useful features first
+- On-Site Customer – customer available full-time
+
+**Agile vs Plan-Driven:**
+| Aspect            | Agile                      | Plan-Driven              |
+|-------------------|----------------------------|--------------------------|
+| Planning          | Incremental                | Upfront, detailed        |
+| Documentation     | Minimal                    | Extensive                |
+| Requirements      | Evolve over time           | Fixed early              |
+| Best for          | Small teams, dynamic needs | Large/regulated systems  |
+
+**Scaling Agile:**
+- Large systems need more upfront design
+- Cross-team communication is critical
+- Continuous integration becomes harder but still valuable
+
+[🔝 Back to Table of Contents](#-table-of-contents)
+
+---
+
+## ✅ Software Quality Assurance (SQA)
+
+**Definition:**
+SQA is a set of activities that ensure processes, procedures, and standards are suitable for the project and correctly implemented. It works **in parallel** with development.
+
+**Elements of SQA:**
+- Standards (IEEE, ISO)
+- Reviews & Audits
+- Testing (planned and efficient)
+- Error/Defect Analysis
+- Change Management
+- Education & Training
+- Security Management
+- Safety & Risk Management
+
+**Focus Areas:**
+- Portability – adapt to different environments
+- Usability – intuitive and easy to use
+- Reusability – components can be reused
+- Correctness – meets requirements
+- Maintainability – easy to modify/extend
+- Error Control – handle and recover from failures
+
+**Benefits:**
+- Produces high-quality software
+- Saves time and cost in the long run
+- Reduces maintenance overhead
+- Increases market share for commercial products
+
+**Challenges:**
+- Cost and time overhead
+- Resource intensive
+- Resistance from teams
+- Complex to implement in large projects
+
+[🔝 Back to Table of Contents](#-table-of-contents)
+
+---
+
+## 📊 Quick Reference Table
+
+| Topic                     | Key Focus                                   | Key Methods/Tools     |
+|---------------------------|---------------------------------------------|-----------------------|
+| Requirements Engineering  | Functional & Non-functional requirements    | Interviews, Use Cases |
+| Software Design           | Architecture, Components, Interfaces        | Wireframes, DFDs      |
+| Agile Development (XP)    | Incremental delivery, simplicity, teamwork  | Pair Programming, CI  |
+| Quality Assurance (SQA)   | Standards, Testing, Risk Management         | ISO, IEEE, Audits     |
+
+---
+
+## 📚 References
+- Software Engineering, 10th Edition – Ian Sommerville
+- IEEE Standards for Software Engineering
+- ISO/IEC 25010: Software Quality Models
+
+---
+
+**Built with ❤️ for students, developers, and lifelong learners.**
