@@ -1,10 +1,10 @@
-===================================================
-SOFTWARE DESIGN — SUMMARY NOTES
-===================================================
 
-===================================================
+SOFTWARE DESIGN — SUMMARY NOTES
+
+
+
 PART 1: THE SOFTWARE DESIGN PROCESS
-===================================================
+
 
 WHAT IS THE SOFTWARE DESIGN PROCESS?
 - The stage where developers plan HOW to turn requirements into
@@ -18,9 +18,9 @@ WHAT IS THE SOFTWARE DESIGN PROCESS?
     interact with one another.
 
 
----------------------------------------------------
+
 1. LEVELS OF SOFTWARE DESIGN
----------------------------------------------------
+
 
 A) INTERFACE DESIGN
    - Focuses on how the system interacts with its environment
@@ -64,9 +64,9 @@ C) DETAILED DESIGN
      - The actual algorithms and data structures used.
 
 
----------------------------------------------------
+
 2. PHASES OF THE SOFTWARE DESIGN PROCESS
----------------------------------------------------
+
 
 1. Understanding Project Requirements
    - Confirms the team understands user needs, business goals,
@@ -96,9 +96,9 @@ C) DETAILED DESIGN
      and functionality before full development starts.
 
 
----------------------------------------------------
+
 3. CORE ELEMENTS OF SOFTWARE DESIGN
----------------------------------------------------
+
 
 - ARCHITECTURE: The conceptual model defining the system's
   structure, behavior, and views (often shown via flowcharts).
@@ -122,9 +122,9 @@ C) DETAILED DESIGN
   accessed, shared, and how data flow is managed.
 
 
----------------------------------------------------
+
 4. WHERE DESIGN FITS IN THE SDLC
----------------------------------------------------
+
 
 Software design happens after requirements gathering and right
 before development begins:
@@ -139,9 +139,9 @@ before development begins:
    approved, coding/implementation starts.
 
 
----------------------------------------------------
+
 5. COMMON SOFTWARE DESIGN TOOLS
----------------------------------------------------
+
 
 - Figma
 - Balsamiq
@@ -150,9 +150,9 @@ before development begins:
 - InVision Studio
 
 
-===================================================
+
 PART 2: THE SOFTWARE DESIGN DOCUMENT (SDD)
-===================================================
+
 
 WHAT IS A SOFTWARE DESIGN DOCUMENT?
 - A technical blueprint/detailed plan describing a software
@@ -167,9 +167,9 @@ WHAT IS A SOFTWARE DESIGN DOCUMENT?
   chance of expensive rework later.
 
 
----------------------------------------------------
+
 1. BENEFITS OF A SOFTWARE DESIGN DOCUMENT
----------------------------------------------------
+
 
 - BETTER COMMUNICATION: Keeps everyone aligned on goals and
   decisions, improving stakeholder communication throughout the
@@ -186,9 +186,9 @@ WHAT IS A SOFTWARE DESIGN DOCUMENT?
   without breaking the overall system.
 
 
----------------------------------------------------
+
 2. KEY SECTIONS OF A SOFTWARE DESIGN DOCUMENT
----------------------------------------------------
+
 
 1) INTRODUCTION & OVERVIEW
    - Sets the stage for the whole document: project summary,
@@ -250,9 +250,9 @@ WHAT IS A SOFTWARE DESIGN DOCUMENT?
      jargon used throughout the document.
 
 
----------------------------------------------------
+
 3. STEPS TO CREATE A SOFTWARE DESIGN DOCUMENT
----------------------------------------------------
+
 
 1. Gather requirements & initial information
    - Collect project requirements, stakeholder input, technical
@@ -283,9 +283,9 @@ WHAT IS A SOFTWARE DESIGN DOCUMENT?
      update the design until everyone agrees before finalizing.
 
 
----------------------------------------------------
+
 4. BEST PRACTICES FOR WRITING AN SDD
----------------------------------------------------
+
 
 - Use clear, simple language — avoid unnecessary jargon; define
   technical terms in the glossary when needed.
@@ -309,4 +309,4 @@ WHAT IS A SOFTWARE DESIGN DOCUMENT?
   with a short recorded walkthrough helps reviewers understand
   complex diagrams/trade-offs faster, and reduces back-and-forth
   during review.
------------------------------------------------------------------------------
+
